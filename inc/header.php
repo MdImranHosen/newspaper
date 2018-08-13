@@ -6,11 +6,16 @@ include "classes/Populer_newsPaper.php";
 include 'classes/Category.php';
 include 'classes/Meta_title.php';
 include 'classes/Socail.php';
+include "classes/Site_etc.php";
+include "classes/About_address.php";
 
  $fm = new Format();
  $db = new Database();
  $show = new Show_news();
  $populer_news = new Populer_newsPaper();
+ $socail = new Socail();
+ $site_etc = new Site_etc();
+ $about_address = new About_address();
 
 
  //Cache Remove Code Start....
@@ -35,7 +40,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 <!-- End style link Menu -->
 
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
 <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
 <link rel="stylesheet" type="text/css" href="assets/css/font.css">
 <link rel="stylesheet" type="text/css" href="assets/css/li-scroller.css">
@@ -43,6 +48,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.css">
 <link rel="stylesheet" type="text/css" href="assets/css/theme.css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="css/social.css">
 <!-- Home page Style -->
 <link rel="stylesheet" type="text/css" href="css/page_text_style.css">
 <!-- New Style 19-03-2018 -->

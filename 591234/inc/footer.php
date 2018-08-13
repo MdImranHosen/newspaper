@@ -1,10 +1,16 @@
+<?php
+   $getSiteetc = $site_etc->getSiteEtcByIdShow();
+   if ($getSiteetc) {
+     while ($result = $getSiteetc->fetch_assoc()) {
+  ?> 
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Develop by </b> Md.Imran Hosen
+      <b>Develop by </b><a target="_blank" href="<?php echo $result['developer_surl']; ?>"> <?php echo $result['developer_name']; ?></a>
     </div>
-    <strong>Copyright &copy; <?php echo date("Y"); ?> <a target="_blank" href="http://techgroup.co">Tech Group</a>.</strong> All rights
+    <strong>Copyright &copy; <?php echo date("Y"); ?> <a target="_blank" href="<?php echo $result['copyright_surl']; ?>"><?php echo $result['copyright_text']; ?></a>.</strong> All rights
     reserved.
   </footer>
+<?php } } ?>
 
 
 </div>

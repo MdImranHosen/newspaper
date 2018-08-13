@@ -30,13 +30,6 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
-        <?php if (Session::get('level') == '0') { ?>
-        <li>
-          <a href="registration.php">
-            <i class="glyphicon glyphicon-user"></i> <span>User </span>
-          </a>
-        </li>
-        <?php } ?>
         <li>
           <a href="category.php">
             <i class="glyphicon glyphicon-th-list"></i><span>Category</span>
@@ -77,10 +70,26 @@
         </li>
         <li>
           <a href="socail.php">
-            <!-- <i class="fa fa-car" aria-hidden="true"></i> -->
-            <img src="upload/socail/socail.png">
-            <span>Socail Media</span>
-            <span class="pull-right-container"></span>
+            <i class="fa fa-laptop"></i> <span>Socail Media</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green"><i class="fa fa-share-square"></i></small>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="about-address.php">
+            <i class="fa fa-th"></i> <span>About & Address</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green"><i class="fa fa-share-square"></i></small>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="site_etc.php">
+            <i class="fa fa-edit"></i> <span>Site ETC</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green"><i class="fa fa-share-square"></i></small>
+            </span>
           </a>
         </li>
         <li>
@@ -97,6 +106,13 @@
             <span class="pull-right-container"></span>
           </a>
         </li>
+         <?php if (Session::get('level') == '0') { ?>
+        <li>
+          <a href="registration.php">
+            <i class="glyphicon glyphicon-user"></i> <span>User </span>
+          </a>
+        </li>
+        <?php } ?>
     <!-- Down Menu is not working --> 
 
       </ul>

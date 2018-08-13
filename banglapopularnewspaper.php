@@ -10,7 +10,7 @@
        if ($getResult) {
          while ($result = $getResult->fetch_assoc()) {
     ?>
-      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6" style="z-index: 1">
       <div class="thumbnail">
         <a href="<?php echo $result['news_url']; ?>" target="_blank">
           <img src="admin/<?php echo $result['image']; ?>" title="<?php echo $result['title']; ?>" alt="<?php echo $result['name']; ?>" style="width:100%;height: 40px;">

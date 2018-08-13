@@ -163,7 +163,7 @@ class Show_news{
 
   // Category rule of show news category page...
   public function getCategoryWishId($cId){
-  	$sql = "SELECT * FROM tbl_news_post WHERE catId = '$cId' ORDER BY id DESC LIMIT 4";
+  	$sql = "SELECT * FROM tbl_news_post WHERE catId = '$cId' ORDER BY id DESC LIMIT 20";
 	$result = $this->db->select($sql);
 	return $result;
   }
@@ -174,4 +174,19 @@ class Show_news{
   	$result = $this->db->select($sql);
   	return $result;
   }*/
+  /* Each Newspost View Count Query */
+  public function getViewsCountIdNews($id){
+  	$sql = "SELECT * FROM tbl_news_post WHERE id = '$id'";
+  	$result = $this->db->select($sql);
+  	if ($result) {
+  		$showResult = $result->fetch_assoc();
+  		$views = $showResult['views'];
+  		$viewc = $views + 1;
+  		$upsql = "UPDATE tbl_news_post SET
+  		              views = '$viewc'
+  		              WHERE id = '$id'";
+  	    $upResult = $this->db->update($upsql);
+  	    return $upResult;
+  	}
+  }
 }

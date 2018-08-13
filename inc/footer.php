@@ -1,41 +1,110 @@
-  <footer id="footer">
-  	<div class="footer_top">
+ <footer class="main-footer">
+    <!-- Footer pdl007.com Start -->
       <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-4">
-          <div class="footer_widget wow fadeInLeftBig">
-            <h2>Flickr Images</h2>
-            <p>
-            	সম্পাদকমণ্ডলীর সভাপতি : জে, ‍এইচ, ‍এম, নূর-এ-আলম, সম্পাদক : এ এইচ এম মোস্তাফিজুর রহমান, উপদেষ্টা সম্পাদক : ডাঃ লায়লা আরজু,  উপদেষ্টা- ক্যাপ্টেন সৈয়দ নাসের মোঃ অকবা (অবঃ), সাইফুল কবির, শফিকুল আলম সোহেল।
-            </p>
-          </div>
+        
+        <section class="col-lg-6 col-md-4">
+         <div class="footer_aboutus">
+          <h3>ABOUT US</h3>
+          <hr>
+        <?php
+         $getSiteAddress = $about_address->getSiteAboutAddressByIdShow();
+         if ($getSiteAddress) {
+           while ($result = $getSiteAddress->fetch_assoc()) {
+        ?>
+          <?php echo $result['s_about']; ?>
+          <?php } } ?>
+         </div>
+        </section>
+        <section class="col-lg-3 col-md-4">
+          <h3>SERVICES</h3>
+          <table class="table table-border table-hover footer_services">
+            <tbody>
+              <tr>
+                <td><i class="far fa-newspaper"></i></td>
+                <td><a href="index.php">PDL News</a></td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-broadcast-tower"></i></td>
+                <td><a href="#">Bangla Radio</a></td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-tv"></i></td>
+                <td><a href="#">Bangla Television</a></td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-wrench"></i></td>
+                <td><a href="#">About Us</a></td>
+              </tr>
+              <tr>
+                <td><i class="fa fa-phone"></i></td>
+                <td><a href="contact.php">Contact Us</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="col-lg-3 col-md-4">
+          <h3>CONTACT & ADDRESS</h3>
+          <hr>
+          <?php
+         $getSiteAddress = $about_address->getSiteAboutAddressByIdShow();
+         if ($getSiteAddress) {
+           while ($result = $getSiteAddress->fetch_assoc()) {
+        ?>
+            <address class="footer_address"><i class="fa fa-map-marker" style="font-size:30px;color:red"></i> <?php echo $result['s_ads']; ?> </address>
+            <hr>
+            <table class="table table-border table-hover">
+              <tbody>
+                <tr>
+                  <td><i class="fa fa-mobile fa-lg"></i></td>
+                  <td><?php echo $result['s_phone']; ?></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+                  <td><?php echo $result['s_email']; ?></td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-globe"></i></td>
+                  <td><a href="<?php echo $result['ws_u']; ?>" target="_blank"> <?php echo $result['ws_u']; ?></a></td>
+                </tr>
+              </tbody>
+            </table>
+            <?php } } ?>
+         </section>
+        
+      <section class="col-lg-8 col-lg-offset-4">
+        <div class="socall_media">
+          <ul>
+            <?php
+             $getSocailm = $socail->getSocailMediaByIdShow();
+             if ($getSocailm) {
+             while ($result = $getSocailm->fetch_assoc()) {
+             ?>
+            <li><a target="_blank" href="<?php echo $result['bn_ns_fb']; ?>" class="site_media md-fb fab fa-facebook-f"></a></li>
+            <li><a target="_blank" href="<?php echo $result['bn_ns_tw']; ?>" class="site_media md-tw fab fa-twitter"></a></li>
+            <li><a target="_blank" href="<?php echo $result['bn_ns_gp']; ?>" class="site_media md-gp fab fa-google-plus-g"></a></li>
+            <li><a target="_blank" href="<?php echo $result['bn_ns_lk']; ?>" class="site_media md-lk fab fa-linkedin-in"></a></li>
+            <li><a target="_blank" href="<?php echo $result['bn_ns_ig']; ?>" class="site_media md-ig fab fa-instagram"></a></li>
+            <li><a target="_blank" href="<?php echo $result['bn_ns_ps']; ?>" class="site_media md-pr fab fa-pinterest-p"></a></li>
+            <li><a target="_blank" href="<?php echo $result['bn_ns_yt']; ?>" class="site_media md-yt fab fa-youtube"></a></li>
+            <?php } } ?>
+          </ul>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-          <div class="footer_widget wow fadeInDown">
-            <h2>Category</h2>
-            <ul class="tag_nav">
-              <li><a href="#">Games</a></li>
-              <li><a href="#">Sports</a></li>
-              <li><a href="#">Fashion</a></li>
-              <li><a href="#">Business</a></li>
-              <li><a href="#">Life &amp; Style</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-          <div class="footer_widget wow fadeInRightBig">
-            <h2>Contact</h2>
-            <p>সম্পাদকীয় কার্য্যালয়- অফিস : ৩০/এ, নয়া পল্টন, ঢাকা-১০০০। মূল প্রকাশনা- প্রকাশিত হয়ঃ আলিফ প্রিন্টিং প্রেস ২২১ ফকিরাপুল, ১ম গলি, মতিঝিল ঢাকা -১০০০থেকে ছেপে ৪৬ সিদ্ধেশ্বরী সার্কুলার রোড, মালিবাগ মোড়, ঢাকা ১২১৭ থেকে প্রকাশিত। </p>
-            <address>
-            ফোন-০২-৫৮৩১৬২১৯,  মোবাঃ ০১৫৫৬-৩৫৬২৭০, ০১৮১৪-৮০৭৮১১, E-mail:- pdetective65@gmail.com, pdnewsbd65@gmail.com
-            </address>
-          </div>
-        </div>
+       
+      </section>
       </div>
+  <!-- End Footer -->
+  <hr>
+  <?php
+   $getSiteetc = $site_etc->getSiteEtcByIdShow();
+   if ($getSiteetc) {
+     while ($result = $getSiteetc->fetch_assoc()) {
+  ?> 
+    <div class="pull-right hidden-xs developer_name_style">
+      <b>Develop by </b> <a href="<?php echo $result['developer_surl']; ?>" target="_blank"><?php echo $result['developer_name']; ?></a>
     </div>
-    <div class="footer_bottom">
-      <p class="copyright">Copyright &copy; <?php echo date("Y"); ?> <a href="index.php">All News Bangla</a></p>
-      <p class="developer">Developed By Md.Imran Hosen</p>
-    </div>
+    <strong>Copyright &copy; <?php echo date("Y"); ?> <a target="_blank" href="<?php echo $result['copyright_surl']; ?>"><?php echo $result['copyright_text']; ?></a>.</strong> All rights
+    reserved.
+  <?php } } ?>
   </footer>
 </div>
 <script src="assets/js/jquery.min.js"></script> 

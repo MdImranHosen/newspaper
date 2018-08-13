@@ -10,6 +10,7 @@
     header('Location:404.php');
   }else{
    $id = (int)$id;
+   $show->getViewsCountIdNews($id);
   }
 ?>
 <?php include "inc/header-top.php" ?>
@@ -38,7 +39,7 @@
   ?>
   <section id="contentSection">
     <div class="row">
-      <div class="col-lg-8 col-md-8 col-sm-12">
+      <div class="col-lg-8 col-md-8 col-sm-12" style="z-index: 1">
         <div class="left_content">
           <div class="single_page">
             <h1><?php echo $getResult['newsTitle']; ?></h1>
@@ -65,10 +66,10 @@
             
           <div class="social_link">
             <ul class="sociallink_nav">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="md-fb fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="md-tw fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="md-gp fab fa-google-plus-g"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
             </ul>
           </div>
           </div>
@@ -122,7 +123,7 @@
            while ($getFistResult = $getFirstCat->fetch_assoc()) {
              
         ?>
-      <div class="col-lg-4 col-md-4 col-sm-12">
+      <div class="col-lg-4 col-md-4 col-sm-12"  style="z-index: 1">
         <aside class="right_content">
           <div class="single_sidebar">
             <h2><span><?php echo $getFistResult['category']; ?></h2>
@@ -148,7 +149,7 @@
     <?php } } ?>
     </div>
     <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="col-lg-12 col-md-12 col-sm-12"  style="z-index: 1">
          <div class="related_post">
               <h2>Related Post <i class="fa fa-thumbs-o-up"></i></h2>
               <ul class="spost_nav wow fadeInDown animated">

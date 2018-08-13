@@ -5,7 +5,7 @@
 
  <section id="contentSection">
     <div class="row">
-      <div class="col-lg-8 col-md-8 col-sm-8">
+      <div class="col-lg-8 col-md-8 col-sm-8" style="z-index: 1">
         <div class="left_content">
          <?php 
                $getFirstCat = $show->getCategoryFistResult();
@@ -176,7 +176,7 @@
           <?php } } ?>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="col-lg-4 col-md-4 col-sm-4" style="z-index: 1">
         <aside class="right_content">
           <?php 
                $getFiveCat = $show->getCategoryFiveResult();

@@ -27,15 +27,15 @@
              if ($getCatId) {
                while ($result = $getCatId->fetch_assoc()) {
            ?>
-           <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+           <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="z-index: 1">
             <div style="padding-bottom: 15px;padding-top: 15px;margin-bottom: 10px;margin-top: 10px;clear: both;">
             <div class="fashion news_category_post">
               <div class="single_post_content">
                 <ul class="business_catgnav wow fadeInDown">
                   <li>
-                    <figure class="bsbig_fig margirn_style_newsCat"><a href="news_details.php?news-details=<?php echo $result['id']; ?>" class="featured_img"> <img alt="" src="<?php echo $result['newsImage']; ?>"> <span class="overlay"></span> </a>
+                    <figure class="bsbig_fig margirn_style_newsCat"><a href="news_details.php?news-details=<?php echo $result['id']; ?>" class="featured_img"> <img alt="Post Image" src="<?php echo $result['newsImage']; ?>"> <span class="overlay"></span> </a>
                       <figcaption> <a href="news_details.php?news-details=<?php echo $result['id']; ?>"><?php echo $result['newsTitle']; ?></a> </figcaption>
-                      <a href="news_details.php?news-details=<?php echo $result['id']; ?>"><?php echo $fm->textShorten($result['details_news']); ?></a>
+                      <a class="newsdpstyle" href="news_details.php?news-details=<?php echo $result['id']; ?>"><?php echo $fm->textShorten($result['details_news']); ?></a>
                     </figure>
                  
                     <div class="time_item_author" unselectable="on"

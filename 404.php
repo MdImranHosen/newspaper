@@ -5,7 +5,7 @@
   
   <section id="contentSection">
     <div class="row">
-      <div class="col-lg-8 col-md-8 col-sm-8">
+      <div class="col-lg-8 col-md-8 col-sm-8" style="z-index: 1">
         <div class="left_content">
           <div class="error_page">
             <h3>We Are Sorry</h3>
@@ -14,7 +14,7 @@
             <span></span> <a href="index.php" class="wow fadeInLeftBig">Go to home page</a> </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="col-lg-4 col-md-4 col-sm-4" style="z-index: 1">
         <aside class="right_content">
           <div class="single_sidebar">
             <h2><span>Popular Post</span></h2>

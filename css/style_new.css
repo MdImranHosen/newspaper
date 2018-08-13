@@ -22,7 +22,19 @@
 	padding-left: 3px;
 	padding-right: 3px;
 }
+a.newsdpstyle{font-size: 17px;word-spacing: 3px;}
 
 .bsbig_fig.margirn_style_newsCat {
-	min-height: 340px;
+	min-height: 360px;
+}
+.pdlnews_style_logo > a.logo > h3 > span{padding-right: 5px;font-family: 'Varela',sans-serif;font-weight: bold;}
+@media(max-width: 995px){
+.bsbig_fig.margirn_style_newsCat {
+	min-height: 380px;
+}
+}
+@media(max-width: 775px){
+.bsbig_fig.margirn_style_newsCat {
+	min-height: auto;
+}
 }

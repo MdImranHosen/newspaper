@@ -66,6 +66,7 @@
                   <th width="5%">NO</th>
                   <th>Title</th>
                   <th>Category</th>
+                  <th width="5%">View</th>
                   <th width="15%">Action</th>
                 </tr>
                 </thead>
@@ -81,6 +82,7 @@
                   <td><?php echo $i; ?></td>
                   <td><?php echo $rows['newsTitle']; ?></td>
                   <td><?php echo $rows['category']; ?></td>
+                  <td><?php echo $rows['views']; ?></td>
                   <td class="menu_defarent">
                     <span><a href="edit_news.php?edit_news_Id=<?php echo $rows['id']; ?>" title="Click Edit"><i class="glyphicon glyphicon-edit"></i></a></span>
                     <span><a class="btn_delete" title="Click Delete." onclick="return confirm('Are you sure to Delete!')" href="?newsListToDelete=<?php echo $rows['id']; ?>"><i class="glyphicon glyphicon-trash"></i></a></span>

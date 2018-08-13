@@ -12,13 +12,13 @@
            while ($result = $getTermsCo->fetch_assoc()) {
     ?>
     <div class="row">
-      <div class="col-lg-12 col-sm-12">
+      <div class="col-lg-12 col-sm-12" style="z-index: 1">
           <h3 class="termsandconditaions_title_style"><?php echo $result['title']; ?></h3>
 
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-12 col-sm-12">
+      <div class="col-lg-12 col-sm-12" style="z-index: 1">
           <article class="terms_condations_details">
             <?php echo $result['details']; ?>
           </article>

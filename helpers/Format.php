@@ -4,11 +4,11 @@
 */
 class Format{
 
-public function textShorten($text, $limit = 400){
+public function textShorten($text, $limit = 200){
   $text = $text. " ";
   $text = substr($text, 0, $limit);
   $text = substr($text, 0, strrpos($text, ' '));
-  $text = $text.".....";
+  $text = $text."...<span style='color:#d083cf'>বিস্তারিত</span>";
   return $text;
  }
 

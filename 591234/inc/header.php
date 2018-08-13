@@ -9,6 +9,9 @@
   include "../classes/Category.php";
   include "../classes/Menu.php";
   include "../classes/User_reg_co.php";
+  include "../classes/Site_etc.php";
+  #include "../classes/Contact.php";
+  include "../classes/About_address.php";
 
 
   $db  = new Database();
@@ -18,6 +21,7 @@
   $cat = new Category();
   $menu = new Menu();
   $user_reg = new User_reg_co();
+  $site_etc = new Site_etc();
 
 
     if (isset($_GET['action']) && $_GET['action'] == 'logout') {
@@ -34,10 +38,16 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin One</title>
+  <title>Admin Panel</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="icon" href="dist/img/icon.png">
+  <?php
+   $getSiteetc = $site_etc->getSiteEtcByIdShow();
+   if ($getSiteetc) {
+     while ($result = $getSiteetc->fetch_assoc()) {
+  ?> 
+  <link rel="icon" href="../<?php echo $result['browser_icon']; ?>">
+  <?php } } ?>
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
@@ -79,5 +89,25 @@
     .menu_defarent span a{}
     .selectedStyle{cursor: pointer;border-radius: 3px;}
     .fileImage{border: 1px solid #ddd;}
+    .control-froms[disabled]{cursor: not-allowed;background-color: #eee;
+    opacity: 1;}
+    .control-froms {
+    display: block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  }
+    .form-control{font-size: 16px;font-weight: normal;}
   </style>
 </head>
