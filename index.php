@@ -23,7 +23,11 @@
             <div class="single_post_content_left">
               <ul class="business_catgnav  wow fadeInDown">
                 <li>
-                  <figure class="bsbig_fig"><a href="news_details.php?news-details=<?php echo $firstTitleResult['id']; ?>" class="featured_img"> <img alt="" src="<?php echo $firstTitleResult['newsImage']; ?>"> <span class="overlay"></span> </a>
+                  <!-- Url Seo Friendly 
+                  news_details.php?news-details=
+                  Rep: news_details/
+                  -->
+                  <figure class="bsbig_fig"><a href="news_details.php?news-details=<?php echo $firstTitleResult['id']; ?>" class="featured_img"> <img alt="" src="<?php echo BASE_PATH; ?><?php echo $firstTitleResult['newsImage']; ?>"> <span class="overlay"></span> </a>
                     <figcaption> <a href="news_details.php?news-details=<?php echo $firstTitleResult['id']; ?>"><?php echo $firstTitleResult['newsTitle']; ?></a> </figcaption>
                     <a class="body_font_style" href="news_details.php?news-details=<?php echo $firstTitleResult['id']; ?>"><?php echo $fm->textShorten($firstTitleResult['details_news']); ?></a>
                   </figure>
@@ -40,7 +44,7 @@
                 ?>
                 <li>
                   <div class="media wow fadeInDown"><a href="news_details.php?news-details=<?php echo $firstTitleallResult['id']; ?>" class="media-left">
-                    <img alt="" src="<?php echo $firstTitleallResult['newsImage']; ?>"> </a>
+                    <img alt="" src="<?php echo BASE_PATH; ?><?php echo $firstTitleallResult['newsImage']; ?>"> </a>
                     <div class="media-body news_title_font_style"><a href="news_details.php?news-details=<?php echo $firstTitleallResult['id']; ?>"><?php echo $firstTitleallResult['newsTitle']; ?></a> </div>
                   </div>
                 </li>
@@ -66,7 +70,7 @@
                ?>
                 <ul class="business_catgnav wow fadeInDown">
                   <li>
-                    <figure class="bsbig_fig"> <a href="news_details.php?news-details=<?php echo $secondTitleResult['id']; ?>" class="featured_img"> <img alt="" src="<?php echo $secondTitleResult['newsImage']; ?>"> <span class="overlay"></span> </a>
+                    <figure class="bsbig_fig"> <a href="news_details.php?news-details=<?php echo $secondTitleResult['id']; ?>" class="featured_img"> <img alt="" src="<?php echo BASE_PATH; ?><?php echo $secondTitleResult['newsImage']; ?>"> <span class="overlay"></span> </a>
                       <figcaption> <a href="news_details.php?news-details=<?php echo $secondTitleResult['id']; ?>"><?php echo $secondTitleResult['newsTitle']; ?></a> </figcaption>
                       <span class="body_font_style"><?php echo $fm->textShorten($secondTitleResult['details_news']); ?></span>
                     </figure>
@@ -81,7 +85,7 @@
                     while ($secondTitleallResult = $getSecondallNews->fetch_assoc()) {
                  ?>
                   <li>
-                    <div class="media wow fadeInDown"> <a href="news_details.php?news-details=<?php echo $secondTitleallResult['id']; ?>" class="media-left"> <img alt="" src="<?php echo $secondTitleallResult['newsImage']; ?>"> </a>
+                    <div class="media wow fadeInDown"> <a href="news_details.php?news-details=<?php echo $secondTitleallResult['id']; ?>" class="media-left"> <img alt="" src="<?php echo BASE_PATH; ?><?php echo $secondTitleallResult['newsImage']; ?>"></a>
                       <div class="media-body news_title_font_style"><a href="news_details.php?news-details=<?php echo $secondTitleallResult['id']; ?>"><?php echo $secondTitleallResult['newsTitle']; ?></a></div>
                     </div>
                   </li>
@@ -108,7 +112,7 @@
                ?>
                 <ul class="business_catgnav">
                   <li>
-                    <figure class="bsbig_fig wow fadeInDown"> <a href="news_details.php?news-details=<?php echo $thiredTitleResult['id']; ?>" class="featured_img"> <img alt="" src="<?php echo $thiredTitleResult['newsImage']; ?>"> <span class="overlay"></span> </a>
+                    <figure class="bsbig_fig wow fadeInDown"> <a href="news_details.php?news-details=<?php echo $thiredTitleResult['id']; ?>" class="featured_img"> <img alt="" src="<?php echo BASE_PATH; ?><?php echo $thiredTitleResult['newsImage']; ?>"> <span class="overlay"></span> </a>
                       <figcaption> <a href="news_details.php?news-details=<?php echo $thiredTitleResult['id']; ?>"><?php echo $thiredTitleResult['newsTitle']; ?></a> </figcaption>
                       <a href="news_details.php?news-details=<?php echo $thiredTitleResult['id']; ?>"><span class="body_font_style"><?php echo $fm->textShorten($thiredTitleResult['details_news']); ?></span></a>
                     </figure>
@@ -122,7 +126,7 @@
                     while ($thiredTitleallResult = $getThirdallNews->fetch_assoc()) {
                  ?>
                   <li>
-                    <div class="media wow fadeInDown"><a href="news_details.php?news-details=<?php echo $thiredTitleallResult['id']; ?>" class="media-left"> <img alt="" src="<?php echo $thiredTitleallResult['newsImage']; ?>"> </a>
+                    <div class="media wow fadeInDown"><a href="news_details.php?news-details=<?php echo $thiredTitleallResult['id']; ?>" class="media-left"> <img alt="" src="<?php echo BASE_PATH; ?><?php echo $thiredTitleallResult['newsImage']; ?>"> </a>
                       <div class="media-body news_title_font_style"> <a href="news_details.php?news-details=<?php echo $thiredTitleallResult['id']; ?>"><?php echo $thiredTitleallResult['newsTitle']; ?></a></div>
                     </div>
                   </li>
@@ -149,7 +153,7 @@
             <div class="single_post_content_left">
               <ul class="business_catgnav">
                 <li>
-                  <figure class="bsbig_fig  wow fadeInDown"><a class="featured_img" href="news_details.php?news-details=<?php echo $getFallResult['id']; ?>"><img src="<?php echo $getFallResult['newsImage']; ?>" alt=""><span class="overlay"></span></a>
+                  <figure class="bsbig_fig  wow fadeInDown"><a class="featured_img" href="news_details.php?news-details=<?php echo $getFallResult['id']; ?>"><img src="<?php echo BASE_PATH; ?><?php echo $getFallResult['newsImage']; ?>" alt=""><span class="overlay"></span></a>
                     <figcaption> <a href="news_details.php?news-details=<?php echo $getFallResult['id']; ?>"><?php echo $getFallResult['newsTitle']; ?></a> </figcaption>
                     <a href="news_details.php?news-details=<?php echo $getFallResult['id']; ?>"><span class="body_font_style"><?php echo $fm->textShorten($getFallResult['details_news']); ?></span></a>
                   </figure>
@@ -165,7 +169,7 @@
                    while ($getFourallResult = $getFourNewsallRes->fetch_assoc()) {
                 ?>
                 <li>
-                  <div class="media wow fadeInDown"> <a href="news_details.php?news-details=<?php echo $getFourallResult['id']; ?>" class="media-left"> <img alt="" src="<?php echo $getFourallResult['newsImage']; ?>"> </a>
+                  <div class="media wow fadeInDown"> <a href="news_details.php?news-details=<?php echo $getFourallResult['id']; ?>" class="media-left"> <img alt="" src="<?php echo BASE_PATH; ?><?php echo $getFourallResult['newsImage']; ?>"> </a>
                     <div class="media-body news_title_font_style"> <a href="news_details.php?news-details=<?php echo $getFourallResult['id']; ?>"><?php echo $getFourallResult['newsTitle']; ?></a> </div>
                   </div>
                 </li>
@@ -193,7 +197,7 @@
                 while ($getFiveNewsResult = $getFiveNews->fetch_assoc()) {
              ?>
               <li>
-                <div class="media wow fadeInDown"> <a href="news_details.php?news-details=<?php echo $getFiveNewsResult['id']; ?>" class="media-left"> <img alt="" src="<?php echo $getFiveNewsResult['newsImage'] ?>"> </a>
+                <div class="media wow fadeInDown"> <a href="news_details.php?news-details=<?php echo $getFiveNewsResult['id']; ?>" class="media-left"> <img alt="" src="<?php echo BASE_PATH; ?><?php echo $getFiveNewsResult['newsImage'] ?>"> </a>
                   <div class="media-body news_title_font_style"> <a href="news_details.php?news-details=<?php echo $getFiveNewsResult['id']; ?>"><?php echo $getFiveNewsResult['newsTitle']; ?></a> </div>
                 </div>
               </li>
@@ -245,7 +249,7 @@
                 while ($getSevenNewsResult = $getSevenNews->fetch_assoc()) {
              ?>
               <li>
-                <div class="media wow fadeInDown"> <a href="news_details.php?news-details=<?php echo $getSevenNewsResult['id']; ?>" class="media-left"> <img alt="" src="<?php echo $getSevenNewsResult['newsImage'] ?>"> </a>
+                <div class="media wow fadeInDown"> <a href="news_details.php?news-details=<?php echo $getSevenNewsResult['id']; ?>" class="media-left"> <img alt="" src="<?php echo BASE_PATH; ?><?php echo $getSevenNewsResult['newsImage'] ?>"> </a>
                   <div class="media-body news_title_font_style"> <a href="news_details.php?news-details=<?php echo $getSevenNewsResult['id']; ?>"><?php echo $getSevenNewsResult['newsTitle']; ?></a> </div>
                 </div>
               </li>
@@ -256,7 +260,7 @@
           
         <!-- Seven Category News List Start-->
 
-        <!-- Six Category News List Start-->
+        <!-- Eight Category News List Start-->
 
         <?php 
                $getEightCat = $show->getCategoryEightResult();
@@ -273,7 +277,7 @@
                 while ($getEightNewsResult = $getEightNews->fetch_assoc()) {
              ?>
               <li>
-                <div class="media wow fadeInDown"> <a href="news_details.php?news-details=<?php echo $getEightNewsResult['id']; ?>" class="media-left"> <img alt="" src="<?php echo $getEightNewsResult['newsImage'] ?>"> </a>
+                <div class="media wow fadeInDown"> <a href="news_details.php?news-details=<?php echo $getEightNewsResult['id']; ?>" class="media-left"> <img alt="" src="<?php echo BASE_PATH; ?><?php echo $getEightNewsResult['newsImage'] ?>"> </a>
                   <div class="media-body news_title_font_style"> <a href="news_details.php?news-details=<?php echo $getEightNewsResult['id']; ?>"><?php echo $getEightNewsResult['newsTitle']; ?></a> </div>
                 </div>
               </li>

@@ -54,8 +54,8 @@ class Show_news{
 		return $result;
 	}
 	public function getCategoryEightResult(){
-		$sevenSql = "SELECT * FROM category WHERE catId ORDER BY catId ASC LIMIT 7,1";
-		$result = $this->db->select($sevenSql);
+		$eightSql = "SELECT * FROM category WHERE catId ORDER BY catId ASC LIMIT 7,1";
+		$result = $this->db->select($eightSql);
 		return $result;
 	}
 
@@ -125,8 +125,8 @@ class Show_news{
 		return $result;
 	}
 	public function getEightNewsallResult($eightId){
-		$sevenSql = "SELECT * FROM tbl_news_post WHERE catId = '$eightId' ORDER BY id DESC LIMIT 4";
-		$result = $this->db->select($sevenSql);
+		$eightSql = "SELECT * FROM tbl_news_post WHERE catId = '$eightId' ORDER BY id DESC LIMIT 4";
+		$result = $this->db->select($eightSql);
 		return $result;
 	}
 

@@ -10,7 +10,7 @@
                  if ($getMqNews) {
                    while ($getMqNewsResult = $getMqNews->fetch_assoc()) {
             ?>
-            <li><a href="news_details.php?news-details=<?php echo $getMqNewsResult['id']; ?>"><img src="<?php echo $getMqNewsResult['newsImage']; ?>" alt="" style="max-width: 27px;max-height: 27px;"><?php echo $fm->textMqShorten($getMqNewsResult['newsTitle']); ?></a></li>
+            <li><a href="<?php echo BASE_PATH; ?>news_details.php?news-details=<?php echo $getMqNewsResult['id']; ?>"><img src="<?php echo BASE_PATH; ?><?php echo $getMqNewsResult['newsImage']; ?>" alt="" style="max-width: 27px;max-height: 27px;"><?php echo $fm->textMqShorten($getMqNewsResult['newsTitle']); ?></a></li>
            <?php } } ?>
           </ul>
           </div>

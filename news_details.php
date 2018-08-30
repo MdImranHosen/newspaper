@@ -60,31 +60,30 @@
                 
                  ?>
              </span> <a href="#"><i class="fa fa-tags"></i>Technology</a> </div>
-            <div class="single_page_content"> <img class="img-center" src="<?php echo $getResult['newsImage']; ?>" alt="">
+            <div class="single_page_content"> <img class="img-center" src="<?php echo BASE_PATH; ?><?php echo $getResult['newsImage']; ?>" alt="">
               <span class="body_font_style margirn_style_text"><?php echo $getResult['details_news']; ?></span></div>
               
             
           <div class="social_link">
             <ul class="sociallink_nav">
-              <li><a href="#"><i class="md-fb fab fa-facebook-f"></i></a></li>
-              <li><a href="#"><i class="md-tw fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="md-gp fab fa-google-plus-g"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              <!-- Share Socail Midia -->
+              <div class="sharethis-inline-share-buttons"></div>
+             <!-- End -->
             </ul>
           </div>
           </div>
         </div>
       
       <nav class="nav-slit"> 
-        <a class="prev" href="news_details.php?news-details=<?php echo $getResult['id']; ?>"> <span class="icon-wrap"><i class="fa fa-angle-left"></i></span>
+        <a class="prev" href="<?php echo BASE_PATH; ?>news_details.php?news-details=<?php echo $getResult['id']; ?>"> <span class="icon-wrap"><i class="fa fa-angle-left"></i></span>
             <div>
                 <h3><span class="news_title_font_style">আগের সংবাদ</span></h3>
-                <img src="<?php echo $getResult['newsImage']; ?>" alt=""/> 
+                <img src="<?php echo BASE_PATH; ?><?php echo $getResult['newsImage']; ?>" alt=""/> 
             </div>
-        </a><a class="next" href="news_details.php?news-details=<?php echo $getResult['id']; ?>"> <span class="icon-wrap"><i class="fa fa-angle-right"></i></span>
+        </a><a class="next" href="<?php echo BASE_PATH; ?>news_details.php?news-details=<?php echo $getResult['id']; ?>"> <span class="icon-wrap"><i class="fa fa-angle-right"></i></span>
           <div>
                 <h3><span class="news_title_font_style">পরের সংবাদ</span></h3>
-                <img src="<?php echo $getResult['newsImage']; ?>" alt=""/>
+                <img src="<?php echo BASE_PATH; ?><?php echo $getResult['newsImage']; ?>" alt=""/>
           </div>
         </a>
       </nav>
@@ -134,9 +133,9 @@
                   while ($firstTitleResultDetails = $getFirstNewsDetails->fetch_assoc()) {
             ?>
               <li>
-                <div class="media wow fadeInDown"> <a href="news_details.php?news-details=<?php echo $firstTitleResultDetails['id']; ?>" class="media-left"> <img alt="" src="<?php echo $firstTitleResultDetails['newsImage']; ?>"> </a>
+                <div class="media wow fadeInDown"> <a href="<?php echo BASE_PATH; ?>news_details.php?news-details=<?php echo $firstTitleResultDetails['id']; ?>" class="media-left"> <img alt="" src="<?php echo BASE_PATH; ?><?php echo $firstTitleResultDetails['newsImage']; ?>"> </a>
                   <div class="media-body news_title_font_style">
-                  <a href="news_details.php?news-details=<?php echo $firstTitleResultDetails['id']; ?>"><?php echo $firstTitleResultDetails['newsTitle']; ?></a>
+                  <a href="<?php echo BASE_PATH; ?>news_details.php?news-details=<?php echo $firstTitleResultDetails['id']; ?>"><?php echo $firstTitleResultDetails['newsTitle']; ?></a>
 
                  </div>
                 </div>
@@ -159,8 +158,8 @@
                    while ($getMqNewsResult = $getMqNews->fetch_assoc()) {
                 ?>
                 <li>
-                  <div class="media"> <a class="media-left" href="news_details.php?news-details=<?php echo $getMqNewsResult['id']; ?>"> <img src="<?php echo $getMqNewsResult['newsImage']; ?>" alt=""> </a>
-                    <div class="media-body news_title_font_style"> <a href="news_details.php?news-details=<?php echo $getMqNewsResult['id']; ?>"><?php echo $getMqNewsResult['newsTitle']; ?></a> </div>
+                  <div class="media"> <a class="media-left" href="<?php echo BASE_PATH; ?>news_details.php?news-details=<?php echo $getMqNewsResult['id']; ?>"> <img src="<?php echo BASE_PATH; ?><?php echo $getMqNewsResult['newsImage']; ?>" alt=""> </a>
+                    <div class="media-body news_title_font_style"> <a href="<?php echo BASE_PATH; ?>news_details.php?news-details=<?php echo $getMqNewsResult['id']; ?>"><?php echo $getMqNewsResult['newsTitle']; ?></a> </div>
                   </div>
                 </li>
               <?php } } ?>

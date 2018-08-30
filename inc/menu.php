@@ -8,13 +8,13 @@ $cat = new Category();
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav main_nav">
-          <li class="active"><a href="index.php"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
+          <li class="active"><a href="<?php echo BASE_PATH; ?>"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
           <?php
              $getMenu = $cat->getCategoryData();
              if ($getMenu) {
                while ($result = $getMenu->fetch_assoc()) {
           ?>
-          <li><a href="news.php?artical=<?php echo $result['catId']; ?>"><?php echo $result['category']; ?></a></li>
+          <li><a href="<?php echo BASE_PATH; ?>news.php?artical=<?php echo $result['catId']; ?>"><?php echo $result['category']; ?></a></li>
          <?php
             }
              }

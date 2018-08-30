@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12" style="z-index: 1">
       <div class="header_bottom">
-        <div class="logo_area pdlnews_style_logo"><a href="index.php" class="logo">
+        <div class="logo_area pdlnews_style_logo"><a href="<?php echo BASE_PATH; ?>" class="logo">
           <h3>
             <?php
                $getSiteetc = $site_etc->getSiteEtcByIdShow();

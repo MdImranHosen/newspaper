@@ -33,9 +33,9 @@
               <div class="single_post_content">
                 <ul class="business_catgnav wow fadeInDown">
                   <li>
-                    <figure class="bsbig_fig margirn_style_newsCat"><a href="news_details.php?news-details=<?php echo $result['id']; ?>" class="featured_img"> <img alt="Post Image" src="<?php echo $result['newsImage']; ?>"> <span class="overlay"></span> </a>
-                      <figcaption> <a href="news_details.php?news-details=<?php echo $result['id']; ?>"><?php echo $result['newsTitle']; ?></a> </figcaption>
-                      <a class="newsdpstyle" href="news_details.php?news-details=<?php echo $result['id']; ?>"><?php echo $fm->textShorten($result['details_news']); ?></a>
+                    <figure class="bsbig_fig margirn_style_newsCat"><a href="<?php echo BASE_PATH; ?>news_details.php?news-details=<?php echo $result['id']; ?>" class="featured_img"> <img alt="Post Image" src="<?php echo BASE_PATH; ?><?php echo $result['newsImage']; ?>"> <span class="overlay"></span> </a>
+                      <figcaption> <a href="<?php echo BASE_PATH; ?>news_details.php?news-details=<?php echo $result['id']; ?>"><?php echo $result['newsTitle']; ?></a> </figcaption>
+                      <a class="newsdpstyle" href="<?php echo BASE_PATH; ?>news_details.php?news-details=<?php echo $result['id']; ?>"><?php echo $fm->textShorten($result['details_news']); ?></a>
                     </figure>
                  
                     <div class="time_item_author" unselectable="on"

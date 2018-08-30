@@ -21,7 +21,7 @@
             <tbody>
               <tr>
                 <td><i class="far fa-newspaper"></i></td>
-                <td><a href="index.php">PDL News</a></td>
+                <td><a href="<?php echo BASE_PATH; ?>">PDL News</a></td>
               </tr>
               <tr>
                 <td><i class="fas fa-broadcast-tower"></i></td>
@@ -37,7 +37,7 @@
               </tr>
               <tr>
                 <td><i class="fa fa-phone"></i></td>
-                <td><a href="contact.php">Contact Us</a></td>
+                <td><a href="<?php echo BASE_PATH; ?>contact.php">Contact Us</a></td>
               </tr>
             </tbody>
           </table>
@@ -107,15 +107,15 @@
   <?php } } ?>
   </footer>
 </div>
-<script src="assets/js/jquery.min.js"></script> 
-<script src="assets/js/wow.min.js"></script> 
-<script src="assets/js/bootstrap.min.js"></script> 
-<script src="assets/js/slick.min.js"></script> 
-<script src="assets/js/jquery.li-scroller.1.0.js"></script> 
-<script src="assets/js/jquery.newsTicker.min.js"></script> 
-<script src="assets/js/jquery.fancybox.pack.js"></script> 
-<script src="assets/js/custom.js"></script>
-<script src="js/menu_script.js"></script>
+<script src="<?php echo BASE_PATH; ?>assets/js/jquery.min.js"></script> 
+<script src="<?php echo BASE_PATH; ?>assets/js/wow.min.js"></script> 
+<script src="<?php echo BASE_PATH; ?>assets/js/bootstrap.min.js"></script> 
+<script src="<?php echo BASE_PATH; ?>assets/js/slick.min.js"></script> 
+<script src="<?php echo BASE_PATH; ?>assets/js/jquery.li-scroller.1.0.js"></script> 
+<script src="<?php echo BASE_PATH; ?>assets/js/jquery.newsTicker.min.js"></script> 
+<script src="<?php echo BASE_PATH; ?>assets/js/jquery.fancybox.pack.js"></script> 
+<script src="<?php echo BASE_PATH; ?>assets/js/custom.js"></script>
+<script src="<?php echo BASE_PATH; ?>js/menu_script.js"></script>
 <!--Menu script End-->
 <!-- Comment this site With diqus.com -->
 <script id="dsq-count-scr" src="//all-bangla-news.disqus.com/count.js" async></script>

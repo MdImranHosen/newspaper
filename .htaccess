@@ -1,4 +1,12 @@
 RewriteEngine on
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^news_details/?$ news_details.php [NC,L]
+RewriteRule ^news/?$ news.php [NC,L]
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)index\.php($|\ |\?)
 RewriteRule ^ /%1 [R=301,L]
+RewriteRule ^news_details/([0-9]+)/?$ news_details.php?news-details=$1
+RewriteRule ^news/([0-9]+)/?$ news.php?artical=$1
 
+RewriteCond %{HTTP_HOST} ^pdlnews.com [NC]
+RewriteRule ^(.*)$ http://www.pdlnews.com/$1 [L,R=301,NC]
